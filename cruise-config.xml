@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="75">
   <server artifactsdir="artifacts" commandRepositoryLocation="default" serverId="0634fc43-adff-426b-b417-781a09b9c51a" />
-  <pipelines group="1_GENIVI_Baselines">
+  <pipelines group="GENIVI_Baselines">
     <pipeline name="yocto-baseline">
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
