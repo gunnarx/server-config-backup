@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="75">
   <server artifactsdir="artifacts" commandRepositoryLocation="default" serverId="0634fc43-adff-426b-b417-781a09b9c51a" />
+  <pipelines group="GDP">
+    <pipeline name="yocto-baseline">
+      <materials>
+        <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="git://git.yoctoproject.org/poky" branch="eb4a134a60e3ac26a48379675ad6346a44010339" dest="poky" autoUpdate="false" materialName="poky_eb4a134a" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="5b0305d9efa4b5692cd942586fb7aa92dba42d59" dest="meta-openembedded" materialName="meta-openembedded_5b0305d9" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="TEMPLATECONF">
+                <value>/var/lib/go-agent/$GO_PIPELINE_NAME/meta-ivi/meta-ivi/conf</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Minnowboard" template="standard_build_a_branch_from_gdp.git_Yocto">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="minnowboard" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Porter">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="GDP-Yocto-QEMU_x86-64">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" materialName="genivi-demo-platform.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Koelsch">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="koelsch" materialName="genivi-demo-platform.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="dev-GDP-porter8">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="dev-porter-8" materialName="genivi-demo-platform.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+  <templates>
+    <pipeline name="standard_build_a_branch_from_gdp.git_Yocto">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </templates>
   <agents>
     <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" />
   </agents>
