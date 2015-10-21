@@ -2,7 +2,7 @@
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="75">
   <server artifactsdir="artifacts" commandRepositoryLocation="default" serverId="0634fc43-adff-426b-b417-781a09b9c51a" />
   <agents>
-    <agent hostname="ari.hostname" ipaddress="127.0.0.1" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" />
+    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" />
   </agents>
 </cruise>
 
