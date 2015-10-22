@@ -111,7 +111,7 @@
             <tasks>
               <exec command="sh" workingdir="gdp-src-build">
                 <arg>-c</arg>
-                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; conf/local.conf</arg>
+                <arg>echo 'BB_NUMBER_THREADS = "1"' &gt;&gt; conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="sh" workingdir="gdp-src-build">
