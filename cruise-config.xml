@@ -119,6 +119,12 @@
                 <arg>conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt;</arg>
+                <arg>conf/local.conf</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
