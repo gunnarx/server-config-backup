@@ -109,10 +109,9 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="sh">
+              <exec command="sh" workingdir="gdp-source-build">
                 <arg>-c</arg>
-                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt;</arg>
-                <arg>conf/local.conf</arg>
+                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="sh" workingdir="gdp-source-build">
