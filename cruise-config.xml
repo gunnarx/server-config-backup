@@ -111,13 +111,13 @@
             <tasks>
               <exec command="sh">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
-              <exec command="sh">
-                <arg>-c</arg>
                 <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt;</arg>
                 <arg>conf/local.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
               <exec command="sh" workingdir="gdp-source-build">
                 <arg>-c</arg>
