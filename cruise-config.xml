@@ -113,6 +113,12 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
+              <exec command="sh" workingdir="gdp-source-build">
+                <arg>-c</arg>
+                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt;</arg>
+                <arg>conf/local.conf</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
