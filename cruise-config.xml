@@ -116,7 +116,7 @@
               </exec>
               <exec command="sh" workingdir="gdp-src-build">
                 <arg>-c</arg>
-                <arg>echo 'PARALLEL_MAKE = "-j1"' &gt;&gt; conf/local.conf</arg>
+                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="sh">
