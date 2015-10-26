@@ -113,7 +113,9 @@
           <job name="cmake">
             <tasks>
               <exec command="rm" workingdir="dlt-daemon">
-                <arg>-rf build</arg>
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="passed" />
               </exec>
               <exec command="mkdir" workingdir="dlt-daemon">
                 <arg>-p build</arg>
