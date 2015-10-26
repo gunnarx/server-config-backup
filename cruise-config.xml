@@ -154,10 +154,6 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="dlt-daemon/build">
-                <arg>..</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="make" workingdir="dlt-daemon/build">
                 <arg>V=1</arg>
                 <arg>-j2</arg>
