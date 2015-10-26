@@ -106,7 +106,7 @@
   <pipelines group="Components">
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/dlt-daemon.git" />
+        <git url="http://git.projects.genivi.org/dlt-daemon.git" dest="dlt-daemon" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
