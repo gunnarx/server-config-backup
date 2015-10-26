@@ -142,7 +142,7 @@
       </materials>
       <stage name="setup" cleanWorkingDir="true">
         <jobs>
-          <job name="cmake">
+          <job name="create_build_dir">
             <tasks>
               <exec command="rm" workingdir="dlt-daemon">
                 <arg>-rf</arg>
