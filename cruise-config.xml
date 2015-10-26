@@ -131,7 +131,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="DLT-daemon-native">
+    <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/dlt-daemon.git" />
       </materials>
