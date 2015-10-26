@@ -169,6 +169,18 @@
           </job>
         </jobs>
       </stage>
+      <stage name="make">
+        <jobs>
+          <job name="make">
+            <tasks>
+              <exec command="make" workingdir="dlt-daemon/build">
+                <arg>V=1</arg>
+                <arg>-j2</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <templates>
