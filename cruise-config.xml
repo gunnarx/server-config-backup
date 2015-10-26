@@ -118,7 +118,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="mkdir" workingdir="dlt-daemon">
-                <arg>-p build</arg>
+                <arg>-p</arg>
+                <arg>build</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cmake" workingdir="dlt-daemon/build">
