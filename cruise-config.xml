@@ -158,6 +158,17 @@
           </job>
         </jobs>
       </stage>
+      <stage name="cmake">
+        <jobs>
+          <job name="cmake">
+            <tasks>
+              <exec command="cmake" workingdir="dlt-daemon/build">
+                <arg>..</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <templates>
