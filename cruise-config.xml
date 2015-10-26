@@ -122,6 +122,10 @@
               <exec command="cmake" workingdir="dlt-daemon/build">
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <arg>V=1 -j2</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
