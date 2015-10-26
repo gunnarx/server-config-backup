@@ -115,6 +115,10 @@
               <exec command="rm" workingdir="dlt-daemon">
                 <arg>-rf build</arg>
               </exec>
+              <exec command="mkdir" workingdir="dlt-daemon">
+                <arg>-p build</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
