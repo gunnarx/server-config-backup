@@ -119,6 +119,9 @@
                 <arg>-p build</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="cmake" workingdir="dlt-daemon/build">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
