@@ -131,8 +131,9 @@
                 <arg>-j2</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cat" workingdir="dlt-daemon/build">
-                <arg>CMakeFiles/CMakeError.log</arg>
+              <exec command="/bin/sh" workingdir="dlt-daemon/build/CMakeFiles">
+                <arg>-c</arg>
+                <arg>"[ -f CMakeError.log ] &amp;&amp; cat CMakeError.log || true"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
