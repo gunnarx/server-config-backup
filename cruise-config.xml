@@ -110,7 +110,7 @@
       </materials>
       <stage name="build">
         <jobs>
-          <job name="GMS">
+          <job name="cmake">
             <tasks>
               <exec command="rm" workingdir="dlt-daemon">
                 <arg>-rf build</arg>
