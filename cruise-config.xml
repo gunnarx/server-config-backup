@@ -151,6 +151,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="Test">
+        <jobs>
+          <job name="Test">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <templates>
