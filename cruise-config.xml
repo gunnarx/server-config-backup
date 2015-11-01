@@ -160,6 +160,16 @@
           </job>
         </jobs>
       </stage>
+      <stage name="ManualTest">
+        <approval type="manual" />
+        <jobs>
+          <job name="Trigger">
+            <tasks>
+              <exec command="test" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <templates>
