@@ -170,6 +170,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="Copy_to_web_server">
+        <jobs>
+          <job name="copy">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <templates>
