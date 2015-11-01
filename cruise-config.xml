@@ -137,6 +137,7 @@
       </stage>
     </pipeline>
   </pipelines>
+  <pipelines group="Experiments" />
   <templates>
     <pipeline name="standard_build_a_branch_from_gdp.git_Yocto">
       <stage name="build">
