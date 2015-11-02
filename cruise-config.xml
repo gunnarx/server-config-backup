@@ -27,6 +27,11 @@
                 <arg>source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
