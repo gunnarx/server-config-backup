@@ -34,7 +34,7 @@
               </exec>
               <exec command="sh">
                 <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
