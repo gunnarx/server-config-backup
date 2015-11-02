@@ -27,7 +27,7 @@
                 <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mv" workingdir="meta-ivi/meta-ivi/conf">
+              <exec command="cp" workingdir="meta-ivi/meta-ivi/conf">
                 <arg>bblayers.conf.sample</arg>
                 <arg>bblayers.conf</arg>
                 <runif status="passed" />
