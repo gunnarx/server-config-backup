@@ -22,14 +22,14 @@
                 <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mv" workingdir="meta-ivi/meta-ivi/conf">
-                <arg>bblayers.conf.sample</arg>
-                <arg>bblayers.conf</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="meta-openembedded">
                 <arg>checkout</arg>
                 <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mv" workingdir="meta-ivi/meta-ivi/conf">
+                <arg>bblayers.conf.sample</arg>
+                <arg>bblayers.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="sh">
