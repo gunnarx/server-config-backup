@@ -37,6 +37,11 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh" workingdir="build">
+                <arg>-c</arg>
+                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
