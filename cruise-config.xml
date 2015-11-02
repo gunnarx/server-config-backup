@@ -5,7 +5,7 @@
     <pipeline name="yocto-baseline">
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
-        <git url="git://git.yoctoproject.org/poky" branch="eb4a134a60e3ac26a48379675ad6346a44010339" dest="poky" autoUpdate="false" materialName="poky_eb4a134a" />
+        <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_eb4a134a" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="5b0305d9efa4b5692cd942586fb7aa92dba42d59" dest="meta-openembedded" materialName="meta-openembedded_5b0305d9" />
       </materials>
       <stage name="Build">
