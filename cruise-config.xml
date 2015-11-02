@@ -24,6 +24,14 @@
               </exec>
             </tasks>
           </job>
+          <job name="checkout_poky_eb4a134a60e3ac26a48379675ad6346a44010339">
+            <tasks>
+              <exec command="git" workingdir="poky">
+                <arg>checkout</arg>
+                <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
