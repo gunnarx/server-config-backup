@@ -32,7 +32,7 @@
                 <arg>bblayers.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="build">
+              <exec command="/bin/sh" workingdir="meta-ivi/meta-ivi/conf">
                 <arg>-c</arg>
                 <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf</arg>
                 <runif status="passed" />
