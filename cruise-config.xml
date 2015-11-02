@@ -17,14 +17,14 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="sh">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="poky">
                 <arg>checkout</arg>
                 <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
