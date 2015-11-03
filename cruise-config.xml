@@ -225,13 +225,13 @@
                 <arg>BB_NUMBER_THREADS = "2" &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="sh">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
               <exec command="echo" workingdir="gdp-src-build/conf">
                 <arg>PARALLEL_MAKE = "-j2" &gt;&gt;local.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
             </tasks>
           </job>
