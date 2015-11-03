@@ -185,7 +185,7 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir" workingdir="dlt-daemon">
+              <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>build</arg>
                 <runif status="passed" />
