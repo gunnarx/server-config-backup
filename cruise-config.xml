@@ -170,6 +170,10 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
+              <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
+                <arg>local_conf_modified</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
