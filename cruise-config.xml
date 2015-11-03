@@ -162,7 +162,7 @@
                 <arg>BB_NUMBER_THREADS = "2" &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="echo" workingdir="gdp-src-build/conf">
+              <exec command="/bin/echo" workingdir="gdp-src-build/conf">
                 <arg>PARALLEL_MAKE = "-j2" &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
