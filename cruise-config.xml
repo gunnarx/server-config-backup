@@ -190,7 +190,7 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="dlt-daemon/build">
+              <exec command="cmake" workingdir="build">
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
