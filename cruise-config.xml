@@ -225,6 +225,10 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
+              <exec command="echo" workingdir="gdp-src-build/conf">
+                <arg>BB_NUMBER_THREADS = "2" &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
