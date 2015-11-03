@@ -49,7 +49,7 @@
     </pipeline>
   </pipelines>
   <pipelines group="GDP">
-    <pipeline name="GDP-Yocto-Minnowboard" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-Minnowboard" template="Yocto_GDP_Build_4_thread_limit">
       <materials>
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="minnowboard" />
       </materials>
