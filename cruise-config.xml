@@ -54,22 +54,10 @@
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="minnowboard" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Porter">
+    <pipeline name="GDP-Yocto-Porter" template="Yocto_GDP_Build_4_thread_limit">
       <materials>
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
       </materials>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="sh">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsch">
       <materials>
@@ -215,6 +203,20 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_Build">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_Build_4_thread_limit">
       <stage name="build">
         <jobs>
           <job name="init_and_bitbake">
