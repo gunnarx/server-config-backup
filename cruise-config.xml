@@ -194,7 +194,7 @@
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="dlt-daemon/build">
+              <exec command="make" workingdir="build">
                 <arg>V=1</arg>
                 <arg>-j2</arg>
                 <runif status="passed" />
