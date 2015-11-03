@@ -71,22 +71,10 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64">
+    <pipeline name="GDP-Yocto-QEMU_x86-64" template="Yocto_GDP_Build">
       <materials>
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" materialName="genivi-demo-platform.git" />
       </materials>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="sh">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsch">
       <materials>
@@ -217,6 +205,20 @@
                 <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_Build">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
               <exec command="sh">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
