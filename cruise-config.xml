@@ -178,30 +178,6 @@
     </pipeline>
   </pipelines>
   <templates>
-    <pipeline name="standard_build_a_branch_from_gdp.git_Yocto">
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="sh" workingdir="gdp-src-build">
-                <arg>-c</arg>
-                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; conf/local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="sh" workingdir="gdp-src-build">
-                <arg>-c</arg>
-                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="sh">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="Yocto_GDP_Build">
       <stage name="build">
         <jobs>
