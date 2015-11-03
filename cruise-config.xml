@@ -180,7 +180,7 @@
         <jobs>
           <job name="cmake_and_make">
             <tasks>
-              <exec command="rm" workingdir="dlt-daemon">
+              <exec command="rm">
                 <arg>-rf</arg>
                 <arg>build</arg>
                 <runif status="passed" />
