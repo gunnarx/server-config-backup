@@ -42,6 +42,11 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>if true ; then ls ; done</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
