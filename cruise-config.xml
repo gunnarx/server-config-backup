@@ -165,7 +165,7 @@
               </exec>
               <exec command="/bin/sh" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>echo PARALLEL_MAKE = "-j2" &gt;&gt;local.conf</arg>
+                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
