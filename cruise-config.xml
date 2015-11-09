@@ -43,6 +43,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>low_load</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
