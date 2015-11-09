@@ -207,11 +207,7 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce">
-      <resources>
-        <resource>full_yocto_build</resource>
-      </resources>
-    </agent>
+    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" />
   </agents>
 </cruise>
 
