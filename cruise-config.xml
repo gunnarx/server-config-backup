@@ -29,11 +29,6 @@
               </exec>
               <exec command="/bin/sh" workingdir="meta-ivi/meta-ivi">
                 <arg>-c</arg>
-                <arg>echo 'PARALLEL_MAKE = "-j2"' &gt;&gt; conf/local.conf.sample</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh" workingdir="meta-ivi/meta-ivi">
-                <arg>-c</arg>
                 <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; conf/local.conf.sample</arg>
                 <runif status="passed" />
               </exec>
