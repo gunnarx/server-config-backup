@@ -44,7 +44,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>low_load</resource>
+              <resource>big_disk</resource>
             </resources>
           </job>
         </jobs>
