@@ -223,7 +223,7 @@
                 <arg>meta-renesas/meta-rcar-gen2/recipes-kernel/gles-module/gles-kernel-module/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
