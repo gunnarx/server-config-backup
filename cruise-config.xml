@@ -218,7 +218,11 @@
         <resource>low_load</resource>
       </resources>
     </agent>
-    <agent hostname="build0.genivigo.com" ipaddress="10.0.0.103" uuid="7cc5ab78-8c05-4c86-9dd4-0b7a1bf8388f" />
+    <agent hostname="build0.genivigo.com" ipaddress="10.0.0.103" uuid="7cc5ab78-8c05-4c86-9dd4-0b7a1bf8388f">
+      <resources>
+        <resource>big_disk</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
