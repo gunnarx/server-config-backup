@@ -151,9 +151,9 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+                <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
