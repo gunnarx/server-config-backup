@@ -222,7 +222,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="/bin/cp">
-                <arg>/home/user/renesas-graphics-drivers/r8a7791_linux_sgx_binaries_gles2.tar.bz2 meta-renesas/meta-rcar-gen2/recipes-graphics/gles-module/gles-user-module/</arg>
+                <arg>/home/user/renesas-graphics-drivers/r8a7791_linux_sgx_binaries_gles2.tar.bz2</arg>
+                <arg>meta-renesas/meta-rcar-gen2/recipes-graphics/gles-module/gles-user-module/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cp">
