@@ -217,7 +217,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="/bin/ls">
-                <arg>/home/user</arg>
+                <arg>-R</arg>
+                <arg>meta-renesas</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/cp">
