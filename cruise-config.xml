@@ -218,10 +218,10 @@
                 <runif status="passed" />
               </exec>
               <exec command="/bin/ls">
-                <arg>/home/user</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/ls">
+                <arg>/home/user</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cp">
