@@ -214,11 +214,11 @@
           <job name="init_and_bitbake">
             <tasks>
               <exec command="/bin/ls">
-                <arg>/home/user</arg>
+                <arg>*</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/ls">
-                <arg>*</arg>
+                <arg>/home/user</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cp">
