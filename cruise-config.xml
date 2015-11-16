@@ -227,6 +227,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>renesas_binaries</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
