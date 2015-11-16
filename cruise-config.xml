@@ -137,6 +137,7 @@
       </stage>
     </pipeline>
   </pipelines>
+  <pipelines group="Retired_Pipelines" />
   <templates>
     <pipeline name="Yocto_GDP_Build">
       <stage name="build">
