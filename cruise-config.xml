@@ -227,7 +227,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="cp">
-                <arg>/home/user/renesas-graphics-drivers/SGX_KM_M2.tar.bz2 meta-renesas/meta-rcar-gen2/recipes-kernel/gles-module/gles-kernel-module</arg>
+                <arg>/home/user/renesas-graphics-drivers/SGX_KM_M2.tar.bz2</arg>
+                <arg>meta-renesas/meta-rcar-gen2/recipes-kernel/gles-module/gles-kernel-module/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh">
