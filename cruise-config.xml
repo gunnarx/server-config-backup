@@ -143,12 +143,6 @@
               <exec command="df">
                 <arg>-h</arg>
               </exec>
-              <exec command="du">
-                <arg>-hs</arg>
-                <arg>/var/go-agent/pipelines/*</arg>
-                <arg />
-                <runif status="passed" />
-              </exec>
             </tasks>
           </job>
         </jobs>
