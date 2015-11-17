@@ -161,6 +161,9 @@
                 <arg>-h</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>arm</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
