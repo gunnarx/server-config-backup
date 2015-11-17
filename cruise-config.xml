@@ -155,7 +155,7 @@
       <stage name="diskusage">
         <approval type="manual" />
         <jobs>
-          <job name="disk_usage">
+          <job name="stats">
             <tasks>
               <exec command="df">
                 <arg>-h</arg>
