@@ -273,7 +273,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="codethink-genivigo-agent0" ipaddress="185.98.148.185" uuid="3d6fa53c-5619-46c9-8260-034a1fb414e3" />
+    <agent hostname="codethink-genivigo-agent0" ipaddress="192.168.1.45" uuid="3d6fa53c-5619-46c9-8260-034a1fb414e3" />
   </agents>
 </cruise>
 
