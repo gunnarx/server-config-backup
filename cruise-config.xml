@@ -148,6 +148,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="DiskStatistics-build0">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+      <stage name="stage">
+        <approval type="manual" />
+        <jobs>
+          <job name="disk_usage">
+            <tasks>
+              <exec command="df">
+                <arg>-h</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_4_thread_limit">
