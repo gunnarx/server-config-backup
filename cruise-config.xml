@@ -148,7 +148,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="DiskStatistics-build0">
+    <pipeline name="DiskStatistics-build0" isLocked="false">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
       </materials>
