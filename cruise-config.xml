@@ -170,6 +170,10 @@
               <exec command="df">
                 <arg>-h</arg>
               </exec>
+              <exec command="uname">
+                <arg>-a</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
