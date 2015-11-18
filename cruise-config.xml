@@ -54,6 +54,13 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>big_disk</resource>
