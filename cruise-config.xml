@@ -150,30 +150,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="codethink-stats">
-      <materials>
-        <git url="http://github.com/gunnarx/gocd-setup.git" />
-      </materials>
-      <stage name="diskusage">
-        <approval type="manual" />
-        <jobs>
-          <job name="stats">
-            <tasks>
-              <exec command="df">
-                <arg>-h</arg>
-              </exec>
-              <exec command="uname">
-                <arg>-a</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>arm</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="DiskStatistics-codethink1" isLocked="false">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
