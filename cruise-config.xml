@@ -33,15 +33,15 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="git" workingdir="meta-openembedded">
-                <arg>checkout</arg>
-                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>user.name</arg>
                 <arg>Go Server</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="poky">
