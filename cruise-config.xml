@@ -146,6 +146,9 @@
                 <arg>-h</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>big_disk</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
