@@ -188,21 +188,6 @@
     </pipeline>
   </pipelines>
   <templates>
-    <pipeline name="Yocto_GDP_Build">
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="/bin/sh">
-                <arg>-c</arg>
-                <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="Yocto_GDP_Build_4_thread_limit">
       <stage name="build">
         <jobs>
