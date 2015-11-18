@@ -39,16 +39,16 @@
                 <arg>Go Server</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="meta-openembedded">
-                <arg>checkout</arg>
-                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
                 <arg>user.email</arg>
                 <arg>no_email@genivigo.com</arg>
                 <arg />
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="poky">
