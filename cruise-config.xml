@@ -35,6 +35,7 @@
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
+                <arg>--global</arg>
                 <arg>user.name</arg>
                 <arg>Go Server</arg>
                 <runif status="passed" />
