@@ -42,9 +42,9 @@
               </exec>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
+                <arg>--global</arg>
                 <arg>user.email</arg>
                 <arg>no_email@genivigo.com</arg>
-                <arg />
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="meta-openembedded">
