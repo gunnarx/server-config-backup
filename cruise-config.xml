@@ -296,7 +296,7 @@
     <pipeline name="meta-ivi-build-10-w19">
       <stage name="build">
         <jobs>
-          <job name="defaultJob" />
+          <job name="init_and_bitbake" />
         </jobs>
       </stage>
     </pipeline>
