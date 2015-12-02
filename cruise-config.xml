@@ -333,6 +333,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>big_disk</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
