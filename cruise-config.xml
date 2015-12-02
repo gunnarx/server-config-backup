@@ -28,7 +28,7 @@
     </pipeline>
     <pipeline name="yocto-baseline-next" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-10-w19">
       <materials>
-        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0_w19" materialName="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0_w19" dest="meta-ivi" materialName="meta-ivi" />
       </materials>
     </pipeline>
   </pipelines>
