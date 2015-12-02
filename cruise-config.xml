@@ -294,7 +294,7 @@
       </stage>
     </pipeline>
     <pipeline name="meta-ivi-build-10-w19">
-      <stage name="defaultStage">
+      <stage name="build">
         <jobs>
           <job name="defaultJob" />
         </jobs>
