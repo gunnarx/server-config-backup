@@ -26,7 +26,7 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" materialName="meta-openembedded_fido" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-next" template="meta-ivi-build-10-w19">
+    <pipeline name="yocto-baseline-next" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-10-w19">
       <materials>
         <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0_w19" materialName="meta-ivi" />
       </materials>
