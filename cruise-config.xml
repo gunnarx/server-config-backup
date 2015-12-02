@@ -312,6 +312,11 @@
                 <arg>noemail@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>fc45deac89ef63ca1c44e763c38ced7dfd72cbe1</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
