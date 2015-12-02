@@ -309,6 +309,7 @@
         <resource>arm</resource>
       </resources>
     </agent>
+    <agent hostname="ac95379f76c8" ipaddress="172.17.42.1" uuid="6b172da9-01ad-4e21-bbcf-66a09c8621b5" />
   </agents>
 </cruise>
 
