@@ -316,7 +316,7 @@
                 <arg>config</arg>
                 <arg>--global</arg>
                 <arg>user.name</arg>
-                <arg>noemail@genivigo.com</arg>
+                <arg>noemail@go.com.genivi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="poky">
