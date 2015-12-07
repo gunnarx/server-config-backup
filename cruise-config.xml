@@ -2,7 +2,7 @@
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="75">
   <server artifactsdir="artifacts" purgeStart="3.0" purgeUpto="7.0" commandRepositoryLocation="genivi" serverId="0634fc43-adff-426b-b417-781a09b9c51a">
     <security>
-      <passwordFile path="/etc/go/userdb/users" />
+      <passwordFile path="/etc/go/users" />
       <roles>
         <role name="Guest">
           <users>
@@ -19,57 +19,19 @@
     </security>
   </server>
   <pipelines group="GENIVI_Baselines">
-    <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false">
+    <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
         <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_fido" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" materialName="meta-openembedded_fido" />
       </materials>
-      <stage name="Build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <environmentvariables>
-              <variable name="TEMPLATECONF">
-                <value>/var/lib/go-agent/$GO_PIPELINE_NAME/meta-ivi/meta-ivi/conf</value>
-              </variable>
-            </environmentvariables>
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-openembedded">
-                <arg>checkout</arg>
-                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="poky">
-                <arg>checkout</arg>
-                <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>big_disk</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
+    </pipeline>
+    <pipeline name="yocto-baseline-next" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-10-w19">
+      <materials>
+        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0_w19" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" materialName="poky_jethro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" materialName="meta-openembedded_jethro" />
+      </materials>
     </pipeline>
   </pipelines>
   <pipelines group="GDP">
@@ -291,9 +253,98 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="meta-ivi-build">
+      <stage name="Build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="TEMPLATECONF">
+                <value>/var/lib/go-agent/$GO_PIPELINE_NAME/meta-ivi/meta-ivi/conf</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>Go Server</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="poky">
+                <arg>checkout</arg>
+                <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>big_disk</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="meta-ivi-build-10-w19">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>Go Server</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>noemail@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="poky">
+                <arg>checkout</arg>
+                <arg>fc45deac89ef63ca1c44e763c38ced7dfd72cbe1</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-openembedded">
+                <arg>checkout</arg>
+                <arg>c63423e305c0c68e2a9aa1ae2e7509352a85c871</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake leviathan-image</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>big_disk</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </templates>
   <agents>
-    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce">
+    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" isDisabled="true">
       <resources>
         <resource>low_load</resource>
       </resources>
@@ -307,6 +358,12 @@
     <agent hostname="codethink-genivigo-agent0" ipaddress="192.168.1.45" uuid="3d6fa53c-5619-46c9-8260-034a1fb414e3">
       <resources>
         <resource>arm</resource>
+      </resources>
+    </agent>
+    <agent hostname="ac95379f76c8" ipaddress="172.17.0.3" uuid="6b172da9-01ad-4e21-bbcf-66a09c8621b5">
+      <resources>
+        <resource>big_disk</resource>
+        <resource>low_load</resource>
       </resources>
     </agent>
   </agents>
