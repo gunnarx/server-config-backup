@@ -19,6 +19,17 @@
     </security>
   </server>
   <pipelines group="GENIVI_Baselines">
+    <authorization>
+      <view>
+        <user>Baseline_dev</user>
+      </view>
+      <operate>
+        <user>Baseline_dev</user>
+      </operate>
+      <admins>
+        <user>Baseline_dev</user>
+      </admins>
+    </authorization>
     <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
