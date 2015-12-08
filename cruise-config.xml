@@ -75,6 +75,17 @@
     </pipeline>
   </pipelines>
   <pipelines group="Experiments">
+    <authorization>
+      <view>
+        <user>Developer</user>
+      </view>
+      <operate>
+        <user>Developer</user>
+      </operate>
+      <admins>
+        <user>Developer</user>
+      </admins>
+    </authorization>
     <pipeline name="SDK">
       <materials>
         <git url="http://git.projects.genivi.org/meta-genivi-demo.git" />
