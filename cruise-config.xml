@@ -2,7 +2,7 @@
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="75">
   <server artifactsdir="artifacts" purgeStart="3.0" purgeUpto="7.0" commandRepositoryLocation="default" serverId="0634fc43-adff-426b-b417-781a09b9c51a">
     <security>
-      <passwordFile path="/gouser/users" />
+      <passwordFile path="/gousers/users" />
       <roles>
         <role name="Guest">
           <users>
