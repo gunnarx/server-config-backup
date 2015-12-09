@@ -77,11 +77,8 @@
   <pipelines group="Experiments">
     <authorization>
       <view>
-        <user>Developer</user>
+        <user>Gje</user>
       </view>
-      <operate>
-        <user>Developer</user>
-      </operate>
       <admins>
         <user>Developer</user>
       </admins>
