@@ -213,7 +213,7 @@
                 <arg>local_conf_modified</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
