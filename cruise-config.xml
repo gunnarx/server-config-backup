@@ -97,7 +97,11 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>Developer</role>
       </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false" template="CMAKE_build">
       <materials>
