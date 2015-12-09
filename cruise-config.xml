@@ -63,7 +63,14 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>GDP_Developer</role>
       </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
     </authorization>
     <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_4_thread_limit">
       <materials>
