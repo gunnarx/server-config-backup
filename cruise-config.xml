@@ -220,7 +220,14 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>Developer</role>
       </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
     </authorization>
     <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_4_thread_limit">
       <materials>
