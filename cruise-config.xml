@@ -439,11 +439,6 @@
         <resource>low_load</resource>
       </resources>
     </agent>
-    <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.144.36" uuid="4ca169b4-a570-4a9b-ae3f-1e2f22c0d116" isDisabled="true">
-      <resources>
-        <resource>ct_test</resource>
-      </resources>
-    </agent>
   </agents>
 </cruise>
 
