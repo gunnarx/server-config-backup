@@ -10,11 +10,7 @@
             <user>guest</user>
           </users>
         </role>
-        <role name="Developer">
-          <users>
-            <user>StephenL</user>
-          </users>
-        </role>
+        <role name="Developer" />
       </roles>
       <admins>
         <user>gunnar</user>
