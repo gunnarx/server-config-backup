@@ -11,6 +11,11 @@
           </users>
         </role>
         <role name="Developer" />
+        <role name="GDP_Developer">
+          <users>
+            <user>StephenL</user>
+          </users>
+        </role>
       </roles>
       <admins>
         <user>gunnar</user>
