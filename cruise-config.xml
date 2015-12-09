@@ -9,9 +9,14 @@
             <user>user</user>
             <user>guest</user>
             <user>StephenL</user>
+            <user>PedroA</user>
           </users>
         </role>
-        <role name="Developer" />
+        <role name="Developer">
+          <users>
+            <user>PedroA</user>
+          </users>
+        </role>
         <role name="GDP_Developer">
           <users>
             <user>StephenL</user>
