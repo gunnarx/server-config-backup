@@ -80,6 +80,14 @@
     </pipeline>
   </pipelines>
   <pipelines group="Experiments">
+    <authorization>
+      <view>
+        <role>Guest</role>
+      </view>
+      <operate>
+        <role>Guest</role>
+      </operate>
+    </authorization>
     <pipeline name="SDK">
       <materials>
         <git url="http://git.projects.genivi.org/meta-genivi-demo.git" />
