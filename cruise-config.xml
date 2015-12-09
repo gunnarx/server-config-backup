@@ -8,6 +8,7 @@
           <users>
             <user>user</user>
             <user>guest</user>
+            <user>StephenL</user>
           </users>
         </role>
         <role name="Developer" />
