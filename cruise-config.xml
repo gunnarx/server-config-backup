@@ -433,7 +433,7 @@
         <resource>arm</resource>
       </resources>
     </agent>
-    <agent hostname="ac95379f76c8" ipaddress="172.17.0.3" uuid="6b172da9-01ad-4e21-bbcf-66a09c8621b5">
+    <agent hostname="ac95379f76c8" ipaddress="172.17.0.3" uuid="6b172da9-01ad-4e21-bbcf-66a09c8621b5" isDisabled="true">
       <resources>
         <resource>big_disk</resource>
         <resource>low_load</resource>
