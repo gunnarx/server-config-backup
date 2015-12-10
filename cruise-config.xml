@@ -417,11 +417,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" isDisabled="true">
-      <resources>
-        <resource>low_load</resource>
-      </resources>
-    </agent>
     <agent hostname="build0.genivigo.com" ipaddress="10.0.0.103" uuid="7cc5ab78-8c05-4c86-9dd4-0b7a1bf8388f">
       <resources>
         <resource>big_disk</resource>
