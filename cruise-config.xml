@@ -431,12 +431,6 @@
         <resource>arm</resource>
       </resources>
     </agent>
-    <agent hostname="ac95379f76c8" ipaddress="172.17.0.3" uuid="6b172da9-01ad-4e21-bbcf-66a09c8621b5" isDisabled="true">
-      <resources>
-        <resource>big_disk</resource>
-        <resource>low_load</resource>
-      </resources>
-    </agent>
     <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.144.36" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443">
       <resources>
         <resource>ct_test</resource>
