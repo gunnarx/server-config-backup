@@ -443,6 +443,7 @@
       <resources>
         <resource>big_disk</resource>
         <resource>low_load</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
   </agents>
