@@ -452,7 +452,6 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="ae470c51cfbe" ipaddress="172.17.42.1" uuid="2251ef97-cd79-46ba-81aa-9b3326d1eb99" isDisabled="true" />
   </agents>
 </cruise>
 
