@@ -222,6 +222,19 @@
       </stage>
     </pipeline>
   </pipelines>
+  <pipelines group="Codethink_GDP">
+    <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
+      <materials>
+        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemu-ci" materialName="genivi-demo-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-demo-master-qemu-ci" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-demo-platform.git" />
+        <git url="git://git.projects.genivi.org/meta-genivi-demo.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-demo.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
       <view>
@@ -417,6 +430,100 @@
             </tasks>
             <resources>
               <resource>big_disk</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_qemu_image">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
+                <arg>local_conf_modified</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-demo-platform --outdir=output</arg>
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ct_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_qemu_latest_meta_genivi_demo">
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="rm" workingdir="gdp">
+                <arg>-rf</arg>
+                <arg>meta-genivi-demo</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mv" workingdir="gdp">
+                <arg>../meta-genivi-demo</arg>
+                <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/usr/bin/touch" workingdir="gdp/gdp-src-build/conf">
+                <arg>local_conf_modified</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+              <exec command="bash" workingdir="gdp">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-demo-platform --outdir=output</arg>
+              </exec>
+              <exec command="rm">
+                <arg>-r</arg>
+                <arg>gdp</arg>
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ct_test</resource>
             </resources>
           </job>
         </jobs>
