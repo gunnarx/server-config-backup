@@ -227,18 +227,6 @@
       <materials>
         <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="genivi-demo-platform" />
       </materials>
-      <stage name="ClearAll">
-        <jobs>
-          <job name="ClearHome">
-            <tasks>
-              <exec command="/bin/bash">
-                <arg>-c</arg>
-                <arg>rm -rf *</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
       <stage name="defaultStage">
         <jobs>
           <job name="defaultJob">
@@ -246,6 +234,18 @@
               <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="ClearAll">
+        <jobs>
+          <job name="ClearHome">
+            <tasks>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>rm -rf *</arg>
               </exec>
             </tasks>
           </job>
