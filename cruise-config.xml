@@ -234,6 +234,7 @@
               <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+                <runif status="passed" />
               </exec>
             </tasks>
           </job>
