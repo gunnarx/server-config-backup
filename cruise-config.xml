@@ -574,7 +574,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce">
+    <agent hostname="ari.hostname" ipaddress="23.226.68.119" uuid="2613d9c3-28b4-4990-bf28-993499c994ce" isDisabled="true">
       <resources>
         <resource>low_load</resource>
         <resource>cmake</resource>
