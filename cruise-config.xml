@@ -12,6 +12,7 @@
             <user>PedroA</user>
             <user>tpollard</user>
             <user>buildmonitor</user>
+            <user>mhoyer</user>
           </users>
         </role>
         <role name="Developer">
@@ -19,6 +20,7 @@
             <user>PedroA</user>
             <user>StephenL</user>
             <user>tpollard</user>
+            <user>mhoyer</user>
           </users>
         </role>
         <role name="GDP_Developer">
