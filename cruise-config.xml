@@ -239,6 +239,18 @@
           </job>
         </jobs>
       </stage>
+      <stage name="ClearAll">
+        <jobs>
+          <job name="ClearHome">
+            <tasks>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>rm -rf *</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="GDP_Maintenance">
