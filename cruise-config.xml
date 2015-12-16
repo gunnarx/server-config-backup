@@ -237,6 +237,10 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="kernel" path="recording/bzImage-qemux86-64.bin" />
+              <tab name="rfs" path="recoding/genivi-demo-platform-qemux86-64.ext3" />
+            </tabs>
             <resources>
               <resource>big_disk</resource>
             </resources>
