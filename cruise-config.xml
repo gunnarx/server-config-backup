@@ -240,6 +240,10 @@
             <resources>
               <resource>big_disk</resource>
             </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/tmp/deploy/images/bzImage-qemux86-64.bin" dest="recording" />
+              <artifact src="gdp-src-build/tmp/deploy/images/genivi-demo-platform-qemux86-64.ext3" dest="recording" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
