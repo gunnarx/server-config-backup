@@ -254,6 +254,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="hello-world">
+      <materials>
+        <git url="https://github.com/gmacario/hello.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="make" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Maintenance">
     <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
