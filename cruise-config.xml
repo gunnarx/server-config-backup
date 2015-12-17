@@ -266,6 +266,9 @@
             <tasks>
               <exec command="make" />
             </tasks>
+            <artifacts>
+              <artifact src="hello*" dest="gm_results" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
