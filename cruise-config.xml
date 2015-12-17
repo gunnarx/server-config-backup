@@ -283,6 +283,9 @@
                 <arg>mkdir build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON  ../</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
