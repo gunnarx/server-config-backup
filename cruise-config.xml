@@ -280,7 +280,8 @@
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>mkdir build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON  ../</arg>
+                <arg>mkdir build &amp;&amp; cd -p build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON  ../</arg>
+                <runif status="passed" />
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
