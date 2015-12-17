@@ -270,6 +270,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="GENIVI_Positioning">
+      <materials>
+        <git url="http://git.projects.genivi.org/lbs/positioning.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>mkdir build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON  ../</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Maintenance">
     <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
