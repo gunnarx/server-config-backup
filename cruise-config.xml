@@ -270,7 +270,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GENIVI_Positioning">
+    <pipeline name="GENIVI_Positioning" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/lbs/positioning.git" />
       </materials>
