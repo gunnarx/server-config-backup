@@ -285,7 +285,7 @@
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>make</arg>
+                <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
