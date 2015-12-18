@@ -305,6 +305,7 @@
     <pipeline name="libdbus-with-commonapi-patch">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="libdbus" materialName="dbus" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
