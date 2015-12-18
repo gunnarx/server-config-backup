@@ -199,7 +199,9 @@
           <job name="build">
             <tasks>
               <exec command="mvn" workingdir="org.genivi.commonapi.core.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.core.target clean verify</arg>
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
