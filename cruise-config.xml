@@ -486,6 +486,11 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>../baseline_ci_helper/checkout_layer_hash.sh poky</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>big_disk</resource>
