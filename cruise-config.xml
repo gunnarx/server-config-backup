@@ -250,6 +250,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
             <artifacts>
               <artifact src="bin" />
             </artifacts>
