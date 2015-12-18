@@ -140,6 +140,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="CompileCppStage">
+        <jobs>
+          <job name="CompileCppJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Experiments">
