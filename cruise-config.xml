@@ -340,7 +340,7 @@
               <resource>libtool</resource>
             </resources>
             <artifacts>
-              <artifact src="dbus/.libs/*.so*" dest="libs" />
+              <artifact src="dbus/dbus/.libs/*.so*" dest="libs" />
             </artifacts>
           </job>
         </jobs>
