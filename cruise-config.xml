@@ -329,15 +329,15 @@
                 <arg>autogen.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>results</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="/bin/sh" workingdir="dbus">
                 <arg>configure</arg>
                 <arg>--prefix</arg>
                 <arg>$PWD/../results</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>results</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make">
