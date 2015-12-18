@@ -217,7 +217,7 @@
               <resource>maven</resource>
             </resources>
             <artifacts>
-              <artifact src="bin" dest="bin" />
+              <artifact src="bin" />
             </artifacts>
           </job>
         </jobs>
