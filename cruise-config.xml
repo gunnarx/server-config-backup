@@ -462,7 +462,7 @@
               <resource>cmake</resource>
             </resources>
             <artifacts>
-              <artifact src="build" dest="build" />
+              <artifact src="build" />
             </artifacts>
           </job>
         </jobs>
