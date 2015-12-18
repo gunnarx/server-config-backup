@@ -123,7 +123,7 @@
         <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
     </pipeline>
-    <pipeline name="software-loading-manager">
+    <pipeline name="software-loading-manager" isLocked="false">
       <materials>
         <git url="https://github.com/magnusfeuer/genivi_software_management.git" />
       </materials>
