@@ -56,7 +56,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-kronos">
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
         <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_fido" />
@@ -458,7 +458,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="meta-ivi-build">
+    <pipeline name="meta-ivi-build-kronos">
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
