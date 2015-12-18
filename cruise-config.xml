@@ -332,7 +332,7 @@
               </exec>
             </tasks>
             <artifacts>
-              <artifact src=".libs/*.so*" dest="libs" />
+              <artifact src="dbus/.libs/*.so*" dest="libs" />
             </artifacts>
           </job>
         </jobs>
