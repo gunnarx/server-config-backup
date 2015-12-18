@@ -523,11 +523,6 @@
                 <arg>noemail@go.com.genivi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="meta-openembedded">
-                <arg>checkout</arg>
-                <arg>c63423e305c0c68e2a9aa1ae2e7509352a85c871</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="/bin/sh" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>../baseline_ci_helper/checkout_layer_hash.sh poky</arg>
