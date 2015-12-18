@@ -341,6 +341,11 @@
                 <arg>dbus</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>results</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>libtool</resource>
