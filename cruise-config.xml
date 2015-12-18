@@ -536,7 +536,7 @@
               <exec command="/bin/sh" workingdir="poky">
                 <arg>-c</arg>
                 <arg>../baseline_ci_helper/get_layer_info_from_README.sh poky revision</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="/bin/sh" workingdir="meta-openembedded">
                 <arg>-c</arg>
