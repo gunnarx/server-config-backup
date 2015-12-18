@@ -288,6 +288,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
