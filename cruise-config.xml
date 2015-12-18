@@ -313,8 +313,8 @@
             <tasks>
               <exec command="/bin/sh" workingdir="dbus">
                 <arg>-c</arg>
-                <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;$f ; done</arg>
-                <arg />
+                <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
+                <runif status="passed" />
               </exec>
             </tasks>
           </job>
