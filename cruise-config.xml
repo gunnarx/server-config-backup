@@ -357,7 +357,7 @@
               <resource>libtool</resource>
             </resources>
             <artifacts>
-              <artifact src="results" dest="results" />
+              <artifact src="results" />
             </artifacts>
           </job>
         </jobs>
