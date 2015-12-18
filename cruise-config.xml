@@ -211,6 +211,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src="bin" dest="bin" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
