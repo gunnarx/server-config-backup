@@ -304,7 +304,7 @@
     </pipeline>
     <pipeline name="libdbus-with-commonapi-patch">
       <materials>
-        <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" materialName="dbus" />
+        <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="libdbus" materialName="dbus" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
