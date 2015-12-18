@@ -262,7 +262,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime" />
       </materials>
       <stage name="build">
         <jobs>
