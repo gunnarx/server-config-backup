@@ -551,6 +551,7 @@
             </tasks>
             <resources>
               <resource>big_disk</resource>
+              <resource>cmake</resource>
             </resources>
           </job>
         </jobs>
