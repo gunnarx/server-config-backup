@@ -241,6 +241,10 @@
                 <arg>clean</arg>
                 <arg>verify</arg>
               </exec>
+              <exec command="mkdir">
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
