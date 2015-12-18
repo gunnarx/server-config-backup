@@ -343,7 +343,7 @@
                 <arg>$PWD/../results</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make">
+              <exec command="make" workingdir="dbus">
                 <arg>-j4</arg>
                 <arg>-C</arg>
                 <arg>dbus</arg>
