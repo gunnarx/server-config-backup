@@ -60,7 +60,7 @@
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
         <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_fido" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" materialName="meta-openembedded_fido" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_fido" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
