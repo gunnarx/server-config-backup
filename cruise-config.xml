@@ -296,7 +296,7 @@
     </pipeline>
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/lbs/positioning.git" />
+        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
       </materials>
       <stage name="defaultStage">
         <jobs>
