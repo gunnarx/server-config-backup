@@ -149,6 +149,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="runSWLMPocStage">
+        <jobs>
+          <job name="runSWLMPocJob">
+            <tasks>
+              <exec command="./start_swlm.sh" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Experiments">
