@@ -276,6 +276,12 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="cmake" workingdir="build">
+                <arg>-D</arg>
+                <arg>USE_INSTALLED_COMMONAPI=ON</arg>
+                <arg>..</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
