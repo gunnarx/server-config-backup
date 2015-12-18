@@ -131,10 +131,10 @@
         <jobs>
           <job name="commonApiGeneration">
             <tasks>
-              <exec command="/bin/sh">
-                <arg>printenv</arg>
-                <arg />
-                <arg>true</arg>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>printenv &amp;&amp; true</arg>
+                <runif status="passed" />
               </exec>
             </tasks>
           </job>
