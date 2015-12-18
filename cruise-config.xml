@@ -523,11 +523,6 @@
                 <arg>noemail@go.com.genivi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="poky">
-                <arg>checkout</arg>
-                <arg>fc45deac89ef63ca1c44e763c38ced7dfd72cbe1</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="meta-openembedded">
                 <arg>checkout</arg>
                 <arg>c63423e305c0c68e2a9aa1ae2e7509352a85c871</arg>
