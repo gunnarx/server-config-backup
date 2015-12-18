@@ -228,6 +228,24 @@
         <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" />
       </materials>
     </pipeline>
+    <pipeline name="common-api-cpp-dbus-tools">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mvn" workingdir="org.genivi.commonapi.dbus.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Experiments">
     <authorization>
