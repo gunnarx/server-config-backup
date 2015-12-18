@@ -273,6 +273,9 @@
               <variable name="CommonAPI_DIR">
                 <value>../common-api-cpp-runtime-build/build</value>
               </variable>
+              <variable name="PKG_CONFIG_PATH">
+                <value>libdbus_patched/lib/pkgconfig</value>
+              </variable>
             </environmentvariables>
             <tasks>
               <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
