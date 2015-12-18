@@ -324,6 +324,12 @@
                 <arg>configure</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <arg>-j4</arg>
+                <arg>-C</arg>
+                <arg>dbus</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
