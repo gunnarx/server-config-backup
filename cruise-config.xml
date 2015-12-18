@@ -331,6 +331,8 @@
               </exec>
               <exec command="/bin/sh" workingdir="dbus">
                 <arg>configure</arg>
+                <arg>--prefix</arg>
+                <arg>dbus/.libs</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make">
