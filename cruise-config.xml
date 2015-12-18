@@ -338,9 +338,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh" workingdir="dbus">
-                <arg>configure</arg>
-                <arg>--prefix</arg>
-                <arg>$PWD/../results</arg>
+                <arg>-c</arg>
+                <arg>configure --prefix $PWD/../results</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="dbus">
