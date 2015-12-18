@@ -278,13 +278,13 @@
                 <arg>-rf</arg>
                 <arg>build</arg>
               </exec>
+              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="mkdir">
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="cmake" workingdir="build">
                 <arg>-D</arg>
                 <arg>USE_INSTALLED_COMMONAPI=ON</arg>
