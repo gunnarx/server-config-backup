@@ -541,7 +541,7 @@
               <exec command="/bin/sh" workingdir="meta-openembedded">
                 <arg>-c</arg>
                 <arg>git checkout $(../baseline_ci_helper/get_layer_info_from_README.sh meta-openembedded revision)</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
