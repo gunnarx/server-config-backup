@@ -481,11 +481,6 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="meta-openembedded">
-                <arg>checkout</arg>
-                <arg>5b0305d9efa4b5692cd942586fb7aa92dba42d59</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="poky">
                 <arg>checkout</arg>
                 <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
