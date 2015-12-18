@@ -320,6 +320,10 @@
                 <arg>autogen.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh" workingdir="dbus">
+                <arg>configure</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
