@@ -153,7 +153,9 @@
         <jobs>
           <job name="runSWLMPocJob">
             <tasks>
-              <exec command="./start_swlm.sh" />
+              <exec command="./start_swm.sh">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
