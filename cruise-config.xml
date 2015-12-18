@@ -535,7 +535,8 @@
               </exec>
               <exec command="/bin/sh" workingdir="meta-ivi">
                 <arg>-c</arg>
-                <arg>../baseline_ci_helper/get_layer_info_from_README.sh poky revision</arg>
+                <arg>../baseline_ci_helper/checkout_layer_hash.sh poky</arg>
+                <arg />
                 <runif status="any" />
               </exec>
               <exec command="/bin/sh" workingdir="meta-openembedded">
