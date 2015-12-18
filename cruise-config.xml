@@ -190,6 +190,22 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="common-api-cpp-tools">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mvn">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target clean verify</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Experiments">
     <authorization>
