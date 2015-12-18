@@ -481,9 +481,9 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="/bin/sh" workingdir="baseline_ci_helper">
                 <arg>-c</arg>
-                <arg>../baseline_ci_helper/checkout_layer_hash.sh poky</arg>
+                <arg>./checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/bash">
