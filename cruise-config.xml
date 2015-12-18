@@ -702,6 +702,7 @@
         <resource>big_disk</resource>
         <resource>low_load</resource>
         <resource>cmake</resource>
+        <resource>maven</resource>
       </resources>
     </agent>
   </agents>
