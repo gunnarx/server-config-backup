@@ -272,6 +272,10 @@
                 <arg>-rf</arg>
                 <arg>build</arg>
               </exec>
+              <exec command="mkdir">
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
