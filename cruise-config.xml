@@ -123,6 +123,24 @@
         <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
     </pipeline>
+    <pipeline name="software-loading-manager">
+      <materials>
+        <git url="https://github.com/magnusfeuer/genivi_software_management.git" />
+      </materials>
+      <stage name="commonApiGeneration">
+        <jobs>
+          <job name="commonApiGeneration">
+            <tasks>
+              <exec command="/bin/sh">
+                <arg>printenv</arg>
+                <arg />
+                <arg>true</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Experiments">
     <authorization>
