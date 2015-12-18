@@ -535,7 +535,7 @@
               </exec>
               <exec command="/bin/sh" workingdir="poky">
                 <arg>-c</arg>
-                <arg>git checkout $(baseline_ci_helper/get_layer_info_from_README.sh poky revision)</arg>
+                <arg>git checkout $(../baseline_ci_helper/get_layer_info_from_README.sh poky revision)</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/bash">
