@@ -331,6 +331,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src=".libs/*.so*" dest="libs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
