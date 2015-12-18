@@ -328,13 +328,13 @@
                 <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="dbus">
-                <arg>autogen.sh</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>results</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh" workingdir="dbus">
+                <arg>autogen.sh</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh" workingdir="dbus">
