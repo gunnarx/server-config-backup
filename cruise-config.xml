@@ -270,7 +270,7 @@
           <job name="build">
             <environmentvariables>
               <variable name="CommonAPI_DIR">
-                <value>common-api-cpp-runtime-build</value>
+                <value>common-api-cpp-runtime-build/build</value>
               </variable>
             </environmentvariables>
             <tasks>
