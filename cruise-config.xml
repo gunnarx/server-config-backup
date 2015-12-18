@@ -339,7 +339,7 @@
               </exec>
               <exec command="/bin/sh" workingdir="dbus">
                 <arg>-c</arg>
-                <arg>configure --prefix $PWD/../results</arg>
+                <arg>./configure --prefix $PWD/../results</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="dbus">
