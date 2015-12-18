@@ -481,11 +481,6 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="poky">
-                <arg>checkout</arg>
-                <arg>eb4a134a60e3ac26a48379675ad6346a44010339</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
