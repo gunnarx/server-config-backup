@@ -302,6 +302,24 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="libdbus-with-commonapi-patch">
+      <materials>
+        <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" />
+      </materials>
+      <stage name="patch_and_build">
+        <jobs>
+          <job name="patch_and_build">
+            <tasks>
+              <exec command="/bin/sh" workingdir="dbus">
+                <arg>-c</arg>
+                <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;$f ; done</arg>
+                <arg />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Experiments">
     <authorization>
