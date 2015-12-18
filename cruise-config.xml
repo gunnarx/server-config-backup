@@ -129,7 +129,7 @@
       </materials>
       <stage name="commonApiGenerationStage">
         <jobs>
-          <job name="commonApiGeneration">
+          <job name="commonApiGenerationJob">
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
