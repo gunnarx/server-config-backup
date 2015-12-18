@@ -292,12 +292,12 @@
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="build">
-                <runif status="passed" />
-              </exec>
               <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="libs" dest="libdbus_patched">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="make" workingdir="build">
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>cmake</resource>
