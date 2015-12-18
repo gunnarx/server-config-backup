@@ -346,6 +346,10 @@
                 <arg>dbus</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <arg>install</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>libtool</resource>
