@@ -779,6 +779,7 @@
         <resource>big_disk</resource>
         <resource>cmake</resource>
         <resource>maven</resource>
+        <resource>ga_test</resource>
       </resources>
     </agent>
   </agents>
