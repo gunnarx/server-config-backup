@@ -332,7 +332,7 @@
               <exec command="/bin/sh" workingdir="dbus">
                 <arg>configure</arg>
                 <arg>--prefix</arg>
-                <arg>dbus/.libs</arg>
+                <arg>$PWD/../results</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make">
