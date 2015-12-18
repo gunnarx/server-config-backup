@@ -349,7 +349,7 @@
                 <arg>dbus</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make">
+              <exec command="make" workingdir="dbus">
                 <arg>install</arg>
                 <runif status="passed" />
               </exec>
