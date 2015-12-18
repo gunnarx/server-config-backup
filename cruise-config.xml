@@ -330,6 +330,11 @@
                 <arg>dbus</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="git" workingdir="dbus">
+                <arg>checkout</arg>
+                <arg>dbus-1.9.0</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <artifacts>
               <artifact src="dbus/.libs/*.so*" dest="libs" />
