@@ -108,12 +108,15 @@
   <pipelines group="Components">
     <authorization>
       <view>
-        <role>Guest</role>
         <role>Developer</role>
+        <role>Guest</role>
       </view>
       <operate>
         <role>Developer</role>
       </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false" template="CMAKE_build">
       <materials>
