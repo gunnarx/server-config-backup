@@ -828,6 +828,7 @@
         <resource>cmake</resource>
         <resource>maven</resource>
         <resource>ga_test</resource>
+        <resource>libtool</resource>
       </resources>
     </agent>
   </agents>
