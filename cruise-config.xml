@@ -336,6 +336,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>libtool</resource>
+            </resources>
             <artifacts>
               <artifact src="dbus/.libs/*.so*" dest="libs" />
             </artifacts>
