@@ -274,7 +274,7 @@
                 <value>../common-api-cpp-runtime-build/build</value>
               </variable>
               <variable name="PKG_CONFIG_PATH">
-                <value>libdbus_patched/results/lib/pkgconfig</value>
+                <value>/var/lib/go-agent/pipelines/common-api-cpp-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
               </variable>
             </environmentvariables>
             <tasks>
