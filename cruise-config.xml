@@ -305,6 +305,9 @@
             <resources>
               <resource>cmake</resource>
             </resources>
+            <artifacts>
+              <artifact src="build" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
