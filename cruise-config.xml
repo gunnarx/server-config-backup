@@ -192,7 +192,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-tools">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
       <stage name="build">
         <jobs>
