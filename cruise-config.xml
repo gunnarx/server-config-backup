@@ -228,7 +228,7 @@
         <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
-    <pipeline name="common-api-cpp-dbus-tools">
+    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" materialName="common-api-dbus-tools.git" />
       </materials>
