@@ -125,44 +125,6 @@
         <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
     </pipeline>
-    <pipeline name="software-loading-manager" isLocked="false">
-      <materials>
-        <git url="https://github.com/magnusfeuer/genivi_software_management.git" />
-      </materials>
-      <stage name="commonApiGenerationStage">
-        <jobs>
-          <job name="commonApiGenerationJob">
-            <tasks>
-              <exec command="/bin/bash">
-                <arg>-c</arg>
-                <arg>printenv &amp;&amp; true</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="compileCppStage">
-        <jobs>
-          <job name="compileCppJob">
-            <tasks>
-              <exec command="true" />
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="runSWLMPocStage">
-        <jobs>
-          <job name="runSWLMPocJob">
-            <tasks>
-              <exec command="./start_swm.sh">
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
@@ -515,6 +477,44 @@
             <artifacts>
               <artifact src="hello*" dest="gm_results" />
             </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="software-loading-manager" isLocked="false">
+      <materials>
+        <git url="https://github.com/magnusfeuer/genivi_software_management.git" />
+      </materials>
+      <stage name="commonApiGenerationStage">
+        <jobs>
+          <job name="commonApiGenerationJob">
+            <tasks>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>printenv &amp;&amp; true</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="compileCppStage">
+        <jobs>
+          <job name="compileCppJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="runSWLMPocStage">
+        <jobs>
+          <job name="runSWLMPocJob">
+            <tasks>
+              <exec command="./start_swm.sh">
+                <runif status="passed" />
+              </exec>
+            </tasks>
           </job>
         </jobs>
       </stage>
