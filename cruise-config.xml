@@ -329,15 +329,13 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="Experiments">
+  <pipelines group="Experiments_and_Testing">
     <authorization>
       <view>
         <role>Guest</role>
-        <role>Developer</role>
       </view>
       <operate>
         <role>Guest</role>
-        <role>Developer</role>
       </operate>
       <admins>
         <role>Developer</role>
