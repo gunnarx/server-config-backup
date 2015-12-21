@@ -270,7 +270,7 @@
               <resource>cmake</resource>
             </resources>
             <artifacts>
-              <artifact src="build" />
+              <artifact src="build/*.so*" />
             </artifacts>
           </job>
         </jobs>
